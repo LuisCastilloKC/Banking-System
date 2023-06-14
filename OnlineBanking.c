@@ -42,6 +42,9 @@ int main(){
         else{
             printf("\n\nError creating account!, Please try again.");
         }
+        if(opt == 2){
+            system("clear");
+        }
     }
 
     return 0;
