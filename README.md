@@ -59,4 +59,4 @@ The Banking System App is released under the [MIT License](https://opensource.or
 ## Acknowledgements
 The open-source community for their invaluable contributions to the development of C programming language.
 ## Contact
-For any inquiries or further information, please contact in www.luiscastillo.dev .
+For any inquiries or further information, please contact in www.luiscastillo.dev.
