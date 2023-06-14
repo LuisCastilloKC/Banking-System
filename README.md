@@ -25,10 +25,9 @@ The Banking System App offers the following features:
 ## Compilation
 To compile and run the Banking System App, follow these steps:
 
-<pre>
 1. Clone the repository from GitHub:
    ```
-   git clone https://github.com/your-username/banking-system-app.git
+   git clone https://github.com/LuisCastilloKC/Banking-System.git
    ```
 
 2. Navigate to the project directory:
@@ -38,14 +37,13 @@ To compile and run the Banking System App, follow these steps:
 
 3. Compile the source code:
    ```
-   gcc banking_system.c -o banking_system
+   gcc OnlineBanking.c -o OnlineBanking
    ```
 
 4. Run the application:
    ```
-   ./banking_system
+   ./OnlineBanking
    ```
-</pre>
 ## Usage
 Upon running the application, you will be presented with a menu of available options. Use the corresponding numbers to select an option and follow the prompts to perform various banking operations.
 
