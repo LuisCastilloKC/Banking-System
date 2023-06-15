@@ -75,6 +75,15 @@ int main()
                     printf("\nPress 3 to withdraw");
                     printf("\nPress 4 to online transfer");
                     printf("\nPress 5 to change password");
+                    printf("\n\nEnter your choice:\t");
+                    scanf("%d", &choice);
+
+                    switch(choice){
+                        case 1:
+                            printf("\nYour balance is: $%.2f", usr.balance);
+                            break;
+
+                    }
 
                     printf("\nDo you want to continue the transaction [y/n]\t");
                     scanf("%s", &cont);
