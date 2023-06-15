@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct user
 {
@@ -10,11 +10,11 @@ struct user
     float balance;
 };
 
-
-int main(){
+int main()
+{
     struct user usr;
     FILE *fp;
-    char filename[50];
+    char filename[50], phone[50], pword[50];
     int opt;
 
     printf("\n What would you you like to do?");
@@ -24,26 +24,55 @@ int main(){
     printf("\n\nEnter your choice:\t");
     scanf("%d", &opt);
 
-    if(opt == 1){
+    if (opt == 1)
+    {
         system("clear");
         printf("Enter your account number:\t");
-        scanf("%s",usr.account);
+        scanf("%s", usr.account);
         printf("\nEnter your phone number:\t");
-        scanf("%s",usr.phone);
+        scanf("%s", usr.phone);
         printf("\nEnter your password:\t");
         scanf("%s", usr.password);
         usr.balance = 0.0;
         strcpy(filename, usr.phone);
         fp = fopen(strcat(filename, ".dat"), "w");
         fwrite(&usr, sizeof(usr), 1, fp);
-        if(fwrite != 0){
+        if (fwrite != 0)
+        {
             printf("\n\nAccount created successfully!");
         }
-        else{
+        else
+        {
             printf("\n\nError creating account!, Please try again.");
         }
-        if(opt == 2){
-            system("clear");
+        fclose(fp);
+    }
+
+    if (opt == 2)
+    {
+        system("clear");
+        printf("\nEnter your phone number:\t");
+        scanf("%s", phone);
+        printf("Password: \t");
+        scanf("%s", pword);
+        strcpy(filename, phone);
+        fp = fopen(strcat(filename, ".dat"), "r");
+        if (fp == NULL)
+        {
+            printf("\nAccount doesn't exist");
+        }
+        else
+        {
+            fread(&usr, sizeof(struct user), 1, fp);
+            fclose(fp);
+            if (!strcmp(pword, usr.password))
+            {
+                printf("\nPassword matched!");
+            }
+            else
+            {
+                printf("\nWrong password!");
+            }
         }
     }
 
