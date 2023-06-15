@@ -15,7 +15,8 @@ int main()
     struct user usr;
     FILE *fp;
     char filename[50], phone[50], pword[50];
-    int opt;
+    int opt, choice;
+    char cont = 'y';
 
     printf("\n What would you you like to do?");
     printf("\n\n1. Register an Account");
@@ -67,7 +68,17 @@ int main()
             fclose(fp);
             if (!strcmp(pword, usr.password))
             {
-                printf("\nPassword matched!");
+                while(cont == 'y'){
+                    system("clear");
+                    printf("\nPress 1 to check balance");
+                    printf("\nPress 2 to deposit");
+                    printf("\nPress 3 to withdraw");
+                    printf("\nPress 4 to online transfer");
+                    printf("\nPress 5 to change password");
+
+                    printf("\nDo you want to continue the transaction [y/n]\t");
+                    scanf("%s", &cont);
+                }
             }
             else
             {
